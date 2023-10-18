@@ -17,7 +17,11 @@ export default function CharactersPreview() {
 	};
 
 	const loadMoreCharacters = () => {
-		getCharacters(currentPageInfo.next);
+		if (currentPageInfo.next) {
+			getCharacters(currentPageInfo.next);
+		} else {
+			alert('You reached the end!');
+		}
 	};
 
 	useEffect(() => {

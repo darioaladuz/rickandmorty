@@ -61,4 +61,14 @@ header {
 	grid-column: 1/-1;
 	align-self: center;
 	justify-self: center;
+	background-color: #000;
+	color: #eee;
+	font-weight: 700;
+	font-size: 1.25rem;
+	border: none;
+	cursor: pointer;
+}
+
+.characters .btn-load-more:hover {
+	color: rgb(151, 206, 76);
 }
