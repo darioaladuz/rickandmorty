@@ -12,7 +12,9 @@ export default function CharacterPreview({ character }) {
 			/>
 			<div className='character-details'>
 				<h2 className='character-name'>{character.name}</h2>
-				<span className='character-type'>{character.type}</span>
+				{character.type && (
+					<span className='character-type'>{character.type}</span>
+				)}
 				<span className='character-species'>{character.species}</span>
 				<span className='character-location'>{character.location.name}</span>
 			</div>
