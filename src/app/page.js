@@ -4,7 +4,6 @@ import CharactersPreview from './components/CharactersPreview';
 export default async function Home() {
 	return (
 		<main>
-			<h1>test</h1>
 			<CharactersPreview />
 		</main>
 	);
