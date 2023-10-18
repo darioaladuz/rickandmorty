@@ -6,8 +6,8 @@ export default function CharacterPreview({ character }) {
 			<Image
 				className='character-image'
 				src={character.image}
-				width='200'
-				height='200'
+				layout={'fill'}
+				objectFit='cover'
 				alt={character.name}
 			/>
 			<div className='character-details'>

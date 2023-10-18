@@ -30,7 +30,9 @@ export default function CharactersPreview() {
 				characters.map((character) => {
 					return <CharacterPreview key={character.id} character={character} />;
 				})}
-			<button onClick={loadMoreCharacters}>Load more</button>
+			<button className='btn-load-more' onClick={loadMoreCharacters}>
+				Load more
+			</button>
 		</section>
 	);
 }
