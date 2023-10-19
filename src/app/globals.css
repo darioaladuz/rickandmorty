@@ -29,6 +29,8 @@ header {
 }
 
 .character {
+	display: flex;
+	flex-direction: column;
 	box-shadow: 0px 1px 4px 2px rgba(151, 206, 76, 0.5);
 	transition: box-shadow 0.2s ease;
 }
@@ -38,11 +40,13 @@ header {
 }
 
 .character-image {
-	position: static !important;
-	height: auto !important;
+	height: auto;
+	width: 100%;
 	aspect-ratio: 1;
 	object-fit: cover;
 }
+
+/* Character details */
 
 .character-details {
 	padding: 16px;
@@ -55,20 +59,38 @@ header {
 	font-size: 0.875em;
 }
 
-.characters .btn-load-more {
+/* Buttons */
+
+/* More details buttons */
+
+.btn-details-wrapper {
+	flex: 1;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+/* Main buttons */
+
+.btn-black {
 	padding: 12px 20px;
 	margin-block: 12px;
 	grid-column: 1/-1;
-	align-self: center;
-	justify-self: center;
 	background-color: #000;
 	color: #eee;
 	font-weight: 700;
-	font-size: 1.25rem;
 	border: none;
 	cursor: pointer;
 }
 
-.characters .btn-load-more:hover {
+.btn-black:hover {
 	color: rgb(151, 206, 76);
+}
+
+/* Button load more */
+
+.btn-load-more {
+	align-self: center;
+	justify-self: center;
+	font-size: 1.2rem;
 }

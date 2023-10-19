@@ -6,6 +6,7 @@ export default function Header() {
 			<Image
 				width='300'
 				height='100'
+				priority
 				alt='Rick and Morty'
 				src='/rickandmorty.svg'
 			/>
