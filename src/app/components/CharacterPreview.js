@@ -1,10 +1,9 @@
 import Image from 'next/image';
 import { useState } from 'react';
+import CharacterModal from './CharacterModal';
 
 export default function CharacterPreview({ character }) {
 	const [showModal, setShowModal] = useState(false);
-
-	console.log({ character });
 
 	return (
 		<article className='character'>
@@ -31,9 +30,10 @@ export default function CharacterPreview({ character }) {
 			</div>
 
 			{showModal && (
-				<div className='character-modal'>
-					<p>{character.name}</p>
-				</div>
+				<CharacterModal
+					closeModal={() => setShowModal(false)}
+					character={character}
+				/>
 			)}
 		</article>
 	);
