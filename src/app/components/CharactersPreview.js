@@ -28,15 +28,27 @@ export default function CharactersPreview() {
 		getCharacters('https://rickandmortyapi.com/api/character');
 	}, []);
 
+	if (characters.length === 0) {
+		return <p className='loading'>Loading...</p>;
+	}
+
 	return (
 		<section className='characters'>
-			{characters &&
-				characters.map((character) => {
-					return <CharacterPreview key={character.id} character={character} />;
-				})}
-			<button className='btn-black btn-load-more' onClick={loadMoreCharacters}>
-				Load more
-			</button>
+			{characters && (
+				<>
+					{characters.map((character) => {
+						return (
+							<CharacterPreview key={character.id} character={character} />
+						);
+					})}
+					<button
+						className='btn-black btn-load-more'
+						onClick={loadMoreCharacters}
+					>
+						Load more
+					</button>
+				</>
+			)}
 		</section>
 	);
 }

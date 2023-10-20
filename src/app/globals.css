@@ -19,6 +19,14 @@ header {
 	place-items: center;
 }
 
+/* Loading */
+
+.loading {
+	font-weight: 700;
+	text-align: center;
+	padding: 24px;
+}
+
 /* Characters preview */
 
 .characters {

@@ -4,6 +4,8 @@ import { useState } from 'react';
 export default function CharacterPreview({ character }) {
 	const [showModal, setShowModal] = useState(false);
 
+	console.log({ character });
+
 	return (
 		<article className='character'>
 			<Image
