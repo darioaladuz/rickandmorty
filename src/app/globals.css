@@ -70,6 +70,9 @@ header {
 /* Character modal */
 
 .character-modal {
+	display: grid;
+	grid-template-rows: auto auto 1fr;
+	max-height: 80%;
 	position: fixed;
 	left: 50%;
 	top: 50%;
@@ -117,7 +120,7 @@ header {
 }
 
 .character-modal-image img {
-	height: 300px;
+	height: auto;
 	width: 100%;
 	aspect-ratio: 1;
 	object-fit: cover;
@@ -127,7 +130,67 @@ header {
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
+	min-height: 0;
 	padding: 12px;
+}
+
+/* Character modal nav */
+
+.character-modal-nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 24px;
+	padding: 8px;
+}
+
+.character-modal-nav-btn {
+	text-transform: capitalize;
+	border: none;
+	background: none;
+	color: white;
+	font-weight: 700;
+	font-size: 1.1875rem;
+	cursor: pointer;
+}
+
+.character-modal-nav-btn.active {
+	color: rgb(151, 206, 76);
+	text-decoration: underline;
+}
+
+/* Character modal tab */
+
+.character-modal-tab,
+.character-modal-tab > * {
+	max-height: 100%;
+}
+
+/* Episodes */
+
+.episodes {
+	overflow: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 12px;
+}
+
+.episode-name {
+	color: rgb(151, 206, 76);
+}
+
+.episode-footer {
+	margin-top: 4px;
+}
+
+.episode-number {
+	color: #eee;
+	font-size: 0.875rem;
+}
+
+.episode-date {
+	font-size: 0.75rem;
 }
 
 /* Buttons */
