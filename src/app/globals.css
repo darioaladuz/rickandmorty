@@ -40,6 +40,32 @@ header {
 	padding: 24px;
 }
 
+/* Search bar */
+.search {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding-block: 8px;
+}
+
+.search-bar {
+	padding: 8px 12px;
+	font-weight: 700;
+}
+
+.search-bar {
+	border: none;
+	background: none;
+	border-bottom: 3px solid rgb(151, 206, 76);
+	color: white;
+}
+
+.search-bar::placeholder {
+	color: #eee;
+	opacity: 0.75;
+}
+
 /* Characters preview */
 
 .characters {

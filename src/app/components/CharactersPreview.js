@@ -61,8 +61,12 @@ export default function CharactersPreview() {
 					className='search-bar'
 					type='search'
 					placeholder='Search...'
+					value={query}
 					onChange={(e) => setQuery(e.target.value)}
 				/>
+				<button onClick={() => setQuery('')} className='btn-black'>
+					Clear
+				</button>
 			</section>
 			{characters.length === 0 ? (
 				<p className='no-characters'>Loading...</p>
