@@ -18,9 +18,9 @@ Si aún no has clonado el proyecto, usa el siguiente comando:
 
 Una vez clonado:
 
-`` cd rickandmorty
+`cd rickandmorty`
 
-npm install && npm run dev ``
+`npm install && npm run dev`
 
 Ahora tendrás el proyecto disponible en
 [http://localhost:3000](http://localhost:3000).
