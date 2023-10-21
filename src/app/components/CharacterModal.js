@@ -1,6 +1,8 @@
 import Image from 'next/image';
+import Episodes from './Episodes';
 
 export default function CharacterModal({ closeModal, character }) {
+	console.log({ character });
 	return (
 		<div className='character-modal'>
 			<div className='character-modal-header'>
@@ -24,7 +26,7 @@ export default function CharacterModal({ closeModal, character }) {
 				<p>Location: {character.location.name}</p>
 				<p>Gender: {character.gender}</p>
 				<p>Status: {character.status}</p>
-				<div className='episodes'></div>
+				<Episodes episodes={character.episode} />
 			</div>
 		</div>
 	);
