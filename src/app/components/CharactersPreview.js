@@ -42,8 +42,6 @@ export default function CharactersPreview() {
 			// If there's more characters to load
 			// Add them to the current characters list
 			getCharacters(currentPageInfo.next);
-		} else {
-			alert('You reached the end!');
 		}
 	};
 
@@ -85,12 +83,14 @@ export default function CharactersPreview() {
 										/>
 									);
 								})}
-								<button
-									className='btn-black btn-load-more'
-									onClick={loadMoreCharacters}
-								>
-									Load more
-								</button>
+								{currentPageInfo.next && (
+									<button
+										className='btn-black btn-load-more'
+										onClick={loadMoreCharacters}
+									>
+										Load more
+									</button>
+								)}
 							</>
 						)}
 					</section>
