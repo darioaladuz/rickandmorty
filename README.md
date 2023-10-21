@@ -47,5 +47,5 @@ habría una capa extra de seguridad).
 
 Dario Aladuz
 
-[Github](https://github.com/darioaladuz)
-[LinkedIn](https://www.linkedin.com/in/darioaladuz/)
+[Github](https://github.com/darioaladuz){:target="\_blank"}
+[LinkedIn](https://www.linkedin.com/in/darioaladuz/){:target="\_blank"}
