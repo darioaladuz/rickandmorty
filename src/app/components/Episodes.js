@@ -21,16 +21,20 @@ export default function Episodes({ episodes }) {
 	const [episodesData, setEpisodesData] = useState([]);
 
 	useEffect(() => {
+		// Extract all episode numbers and convert them into a string
+		// Example: '1,2,3,4'
 		const episodeNumbers = extractEpisodeNumbers(episodes).join(',');
 
 		const getEpisodes = async (url) => {
-			const res = await fetch(url);
+			try {
+				const res = await fetch(url);
 
-			const data = await res.json();
+				const data = await res.json();
 
-			console.log({ data });
-
-			setEpisodesData(data);
+				setEpisodesData(data);
+			} catch (err) {
+				console.error(err);
+			}
 		};
 
 		const episodesUrl = `https://rickandmortyapi.com/api/episode/${episodeNumbers}`;

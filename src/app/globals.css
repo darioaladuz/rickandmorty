@@ -4,6 +4,19 @@
 	box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+	width: 0.75rem;
+}
+
+*::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(151, 206, 76, 0.5);
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: rgb(151, 206, 76);
+	outline: 1px solid black;
+}
+
 body {
 	min-height: 100vh;
 	min-height: 100dvh;
@@ -21,7 +34,7 @@ header {
 
 /* Loading */
 
-.loading {
+.no-characters {
 	font-weight: 700;
 	text-align: center;
 	padding: 24px;
