@@ -1,3 +1,6 @@
+import { useEffect, useState } from 'react';
+import Episode from './Episode';
+
 function extractEpisodeNumbers(episodeUrls) {
 	const episodeNumbers = episodeUrls.map((url) => {
 		// Use a regular expression to extract the episode number from the URL
@@ -15,8 +18,31 @@ function extractEpisodeNumbers(episodeUrls) {
 }
 
 export default function Episodes({ episodes }) {
-	console.log({ episodes });
-	console.log({ numbers: extractEpisodeNumbers(episodes) });
+	const [episodesData, setEpisodesData] = useState([]);
 
-	return <div className='episodes'></div>;
+	useEffect(() => {
+		const episodeNumbers = extractEpisodeNumbers(episodes).join(',');
+
+		const getEpisodes = async (url) => {
+			const res = await fetch(url);
+
+			const data = await res.json();
+
+			console.log({ data });
+
+			setEpisodesData(data);
+		};
+
+		const episodesUrl = `https://rickandmortyapi.com/api/episode/${episodeNumbers}`;
+
+		getEpisodes(episodesUrl);
+	}, []);
+
+	return (
+		<div className='episodes'>
+			{episodesData.map((episode) => (
+				<Episode key={episode.id} episode={episode} />
+			))}
+		</div>
+	);
 }
