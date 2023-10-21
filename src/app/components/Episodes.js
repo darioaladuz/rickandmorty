@@ -31,7 +31,12 @@ export default function Episodes({ episodes }) {
 
 				const data = await res.json();
 
-				setEpisodesData(data);
+				if (data instanceof Array) {
+					setEpisodesData(data);
+				} else {
+					// if there's only one episode, put it in an array
+					setEpisodesData([data]);
+				}
 			} catch (err) {
 				console.error(err);
 			}
